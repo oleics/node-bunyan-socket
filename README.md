@@ -20,29 +20,29 @@ Usage Examples
 
 Make sure to install bunyan-socket via npm inside your project-  
 directory:
-``sh
+```sh
 cd path/to/your/project
 npm install bunyan-socket
-``
+```
 
 Then, in your app.js:
 
-``js
+```js
 var log = require('bunyan-socket')('OnePartOfMyApp')
 
 // log is an instance of a bunyan-logger
 log.info('hello!') // log-message goes to the bunyan-server
-``
+```
 
 And in - for example - in boom.js:
 
-``js
+```js
 var log = require('bunyan-socket')('AnotherPartOfMyApp')
 log.info('hello!')
 
 var sublog = log.child({component: 'SubPart'})
 sublog.debug(process)
-``
+```
 
 Everything you log will go now to the bunyan-server.
 
@@ -60,7 +60,7 @@ For all you humans with nice colors:
 
 #### Programmatically listen to the bunyan-server
 
-``js
+```js
 var listener = require('bunyan-socket/listener')(port, host)
 
 listener
@@ -73,8 +73,7 @@ listener
   .on('data', function(d) {
     process.stdout.write(d.toString())
   })
-
-``
+```
 
 MIT License
 -----------

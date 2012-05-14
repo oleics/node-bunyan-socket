@@ -1,0 +1,36 @@
+{
+  "name": "bunyan-socket",
+  "version": "0.0.0",
+  "description": "Bundle up all of your bunyan log messages by streaming them to one bunyan-server.",
+  "author": {
+    "name": "Oliver Leics",
+    "email": "oliver.leics@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oleics/node-bunyan-socket.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oleics/node-bunyan-socket/issues"
+  },
+  "keywords": [
+    "bunyan",
+    "log",
+    "logger",
+    "server",
+    "stream"
+  ],
+  "main": "./lib/client.js",
+  "bin": {
+    "bunyan-server": "./bin/bunyan-server",
+    "bunyan-listener": "./bin/bunyan-listener"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {"node": ">= 0.6.0"},
+  "dependencies": {
+    "bunyan": "0.6.x",
+    "lazy": "1.0.x"
+  }
+}

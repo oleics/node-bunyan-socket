@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var path = require('path')
+  , fs   = require('fs')
+  , dir_lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib')
+  , log = require(dir_lib+'/client')('bunyan-listener')
+
+var listener = require(dir_lib + '/listener.js')()
+
+listener
+  .on('connection', function(conn) {
+    log.info('connection', conn.remoteAddress, conn.remotePort, conn.address())
+  })
+  .on('close', function(conn) {
+    log.info('close')
+  })
+  .on('data', function(d) {
+    process.stdout.write(d.toString())
+  })

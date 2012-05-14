@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var path = require('path')
+  , fs   = require('fs')
+  , dir_lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib')
+  , options = {}
+
+options.streamTo = fs.createWriteStream('bunyan.log')
+
+require(dir_lib + '/server.js')(options, function(err) {
+  if(err) throw err
+})

@@ -1,14 +1,11 @@
 {
   "name": "bunyan-socket",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bundle up all of your bunyan log messages by streaming them to one bunyan-server.",
-  "author": {
-    "name": "Oliver Leics",
-    "email": "oliver.leics@gmail.com"
-  },
+  "author": "Oliver Leics <oliver.leics@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oleics/node-bunyan-socket.git"
+    "url": "git://github.com/oleics/node-bunyan-socket.git"
   },
   "bugs": {
     "url": "https://github.com/oleics/node-bunyan-socket/issues"
@@ -28,9 +25,13 @@
   "directories": {
     "lib": "./lib"
   },
-  "engines": {"node": ">= 0.6.0"},
+  "engines": {
+    "node": ">= 0.6.0"
+  },
   "dependencies": {
     "bunyan": "0.6.x",
     "lazy": "1.0.x"
-  }
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
 }

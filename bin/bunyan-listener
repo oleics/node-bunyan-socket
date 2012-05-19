@@ -15,5 +15,5 @@ listener
     log.info('close')
   })
   .on('data', function(d) {
-    process.stdout.write(d.toString())
+    process.stdout.write(d.toString()+'\n')
   })

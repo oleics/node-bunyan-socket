@@ -1,6 +1,6 @@
 {
   "name": "bunyan-socket",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bundle up all of your bunyan log messages by streaming them to one bunyan-server.",
   "author": "Oliver Leics <oliver.leics@gmail.com>",
   "repository": {

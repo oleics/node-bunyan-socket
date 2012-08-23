@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/oleics/node-bunyan-socket.png)](http://travis-ci.org/oleics/node-bunyan-socket)
 
 Bunyan Socket
 =============
